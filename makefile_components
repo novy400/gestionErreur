@@ -1,0 +1,14 @@
+
+# Makefile for migrate cREST project
+
+all: frs2000.pgm
+crtlib:  $(WRK_LIB).lib $(BIN_LIB).lib $(TST_LIB).lib
+
+frs2000.pgm: frs2000.dspf frs2000.sqlrpgle
+hello.pgm: hello.rpgle
+helloSql.pgm: helloSql.sqlrpgle
+getProduct.pgm: getProduct.sqlrpgle
+addProduct.pgm: addProduct.sqlrpgle
+test: frs.tst
+
+
