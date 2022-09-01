@@ -2,7 +2,7 @@
 
 dcl-s gMsg char(25);
 
-gMsg = 'Bonjour la terre';
+gMsg = 'Bonjour Carquefou';
 
 dsply gMsg;
 
