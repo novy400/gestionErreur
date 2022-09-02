@@ -1,15 +1,14 @@
 BIN_LIB=YV
-LIBLIST= $(BIN_LIB) 
-CCSID=297 
+LIBLIST= $(BIN_LIB)
+CCSID=297
 
 # The shell we use
 SHELL=/QOpenSys/usr/bin/qsh
 
-
 all: helloWorld.pgm
 
 # rules
-helloWorld.pgm: helloWorld.rpgle
+helloWorld.pgm : helloWorld.rpgle
 
 
 %.lib:
@@ -17,7 +16,7 @@ helloWorld.pgm: helloWorld.rpgle
 	@touch $@
 
 %.pgm:
-	$(eval modules := $(patsubst %,$(WRK_LIB)/%,$(basename $(filter %.rpgle %.sqlrpgle,$(notdir $^)))))
+	$(eval modules := $(patsubst %,$(BIN_LIB)/%,$(basename $(filter %.rpgle %.sqlrpgle,$(notdir $^)))))
 	system "CHGATR OBJ('$<') ATR(*CCSID) VALUE(1208)" 
 	liblist -af $(LIBLIST);\
 	system "CRTPGM PGM($(BIN_LIB)/$*) MODULE($(modules))"
@@ -25,7 +24,7 @@ helloWorld.pgm: helloWorld.rpgle
 
 
 
-%.rpgle: src/%.rpgle
+%.rpgle: src/qrpgle/%.rpgle
 	system "CHGATR OBJ('$<') ATR(*CCSID) VALUE(1208)" 
 	liblist -af $(LIBLIST);\
 	system "CRTRPGMOD MODULE($(BIN_LIB)/$*) SRCSTMF('$<') DBGVIEW($(DBGVIEW)) TGTCCSID($(CCSID))"
