@@ -29,6 +29,9 @@ dcl-proc calcul;
     on-excp 'USR0002';
         // plus de 12 mois travaillés ==> jackpot :-) 
         lMessage =' plus de 12 mois de travail, sérieux ?';
+    on-excp 'ERR0001';
+        // Bug  !) 
+        lMessage ='Horreur !';
     on-error;
         snd-msg *escape %msg('ERR0001':'YABUG':%trim(%proc())); 
     endmon;

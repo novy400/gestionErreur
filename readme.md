@@ -23,4 +23,7 @@ Comment profiter des nouvelles évolutions du langage RPG de la V7R5 pour mieux 
 ```
 ![picture 1](images/70350113d495913ac435b1944c57a93117da4f105a9a6be1d6240d9d09effd41.png)  
 
+### ok avec 14 pour dividende
+![picture 2](images/65eb012ea721bfb657dc77236e49861d14613d44580ee16f994c5e47051741cc.png)  
+
 ## Ressources

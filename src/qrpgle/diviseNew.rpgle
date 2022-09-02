@@ -19,16 +19,19 @@ dcl-proc divise;
     select;
     when pDividende = *zeros;
        lZone = 'Dividende'; 
-       snd-msg *escape %msg('USR0001':'YABUG':%trim(lZone)); 
+       snd-msg *escape %msg('USR0001':'YABUG':%trim(lZone))  
+            %TARGET(*CALLER:1); 
     when pDiviseur > 12;
        lZone = 'Diviseur'; 
-       snd-msg *escape %msg('USR0002':'YABUG':%trim(lZone)); 
+       snd-msg *escape %msg('USR0002':'YABUG':%trim(lZone)) 
+            %TARGET(*CALLER:1); 
     endsl;
     //traitement
     monitor;
         pQuotient = pDividende / pDiviseur;
     on-error;
-        snd-msg *escape %msg('ERR0001':'YABUG':%trim(%proc())); 
+        snd-msg *escape %msg('ERR0001':'YABUG':%trim(%proc()))
+            %TARGET(*CALLER:1); 
     endmon;
     return;
 end-proc;
