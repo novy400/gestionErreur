@@ -24,6 +24,11 @@ Comment profiter des nouvelles évolutions du langage RPG de la V7R5 pour mieux 
 ![picture 1](images/70350113d495913ac435b1944c57a93117da4f105a9a6be1d6240d9d09effd41.png)  
 
 ### ok avec 14 pour dividende
-![picture 2](images/65eb012ea721bfb657dc77236e49861d14613d44580ee16f994c5e47051741cc.png)  
+![picture 2](images/65eb012ea721bfb657dc77236e49861d14613d44580ee16f994c5e47051741cc.png) 
+![picture 4](images/e639db0fe7d9bbd262dfc0e35560ebbb106a95a8f1151706f2cbfb7dd0723d5b.png)  
+
+### old calcul appelle new divise
+Comment se comporte le programme appelant si pas de monitor ?
+![picture 3](images/fda3c464d82be179a68ec49766706709e1cedb3678fab40001c26f05bb18b10d.png)  
 
 ## Ressources
