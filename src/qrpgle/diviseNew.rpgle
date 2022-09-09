@@ -1,7 +1,9 @@
 **FREE
 // control options
-ctl-opt dftactgrp(*no)
+/if defined(*CRTBNDRPG)
+ ctl-opt dftactgrp(*no)
          actgrp(*new);
+/endif
 ctl-opt main(divise);
 // declarations
 // main procedure
