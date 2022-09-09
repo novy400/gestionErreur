@@ -4,7 +4,7 @@ CCSID=297
 # The shell we use
 SHELL=/QOpenSys/usr/bin/qsh
 
-all: crtlib helloWorld.pgm calcul.pgm calculNew.pgm calculWnew.pgm divise.pgm diviseNew.pgm
+all: crtlib init helloWorld.pgm calcul.pgm calculNew.pgm calculWnew.pgm divise.pgm diviseNew.pgm
 
 # rules
 crtlib: $(BIN_LIB).lib
