@@ -1,4 +1,10 @@
 **FREE
+///
+// CALCULE
+// Réalise une division!
+// @tag data
+// @tag data
+///  
 // control options
 /if defined(*CRTBNDRPG)
  ctl-opt dftactgrp(*no)
@@ -14,6 +20,13 @@ dcl-proc calcul;
     dcl-s lDividende int(5);
     dcl-s lDiviseur like(lDividende);
     dcl-s lQuotient zoned(7:2);
+    ///
+    // donne le quoitient.
+    // avec le dividende et le diviseur retourne le quotient.
+    // Description can be multiline
+    // @tag data
+    // @tag data
+    ///  
     dcl-pr getQuotient extpgm('DIVISE');
         pDividende like(lDividende) const;
         pDiviseur like(lDividende) const;
